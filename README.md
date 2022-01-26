@@ -19,7 +19,11 @@ The plugin stores the list of teammates, co-workers in your user's HOME director
     another-name <another-name@example.com>
     
 The config file will be created at the first usage. Feel free to modify this, however the author list can be edited
-using the UI. 
+using the UI.
+
+To populate the `.git_authors` file with the commiters from the current repo you can use this command:
+
+```git log --pretty=format:'%an <%ae>'|sort|uniq|tee ~/.git_authors```
 
 ### Usage
 
